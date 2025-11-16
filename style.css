@@ -1,4 +1,81 @@
 /* RESET + GLOBAL */
+/* FORM STYLING (shared by search + weather) */
+.form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 220px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.55rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.55rem 1.1rem;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+/* MESSAGES */
+.message {
+    padding: 0.6rem 0.9rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.message.error {
+    background-color: #ffd5d5;
+    color: #900;
+}
+
+.message.success {
+    background-color: #d9ffe4;
+    color: #067a23;
+}
+
+/* WEATHER OUTPUT TABLE */
+.weather-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.weather-output th,
+.weather-output td {
+    padding: 0.7rem;
+    border-bottom: 1px solid #eee;
+}
+
+.weather-output th {
+    background: #f3f3f3;
+    text-align: left;
+}
+
 * {
     margin: 0;
     padding: 0;
