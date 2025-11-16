@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Product Inventory (XML)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IMPORTANT: file must be named style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,12 @@
             <div class="logo-placeholder">LOGO</div>
         </div>
 
-        <nav>
+        <!-- Hamburger Button -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <nav id="mobile-menu">
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Products</a></li>
                 <li><a href="weather.html">Weather Forecast</a></li>
@@ -26,9 +32,7 @@
     </div>
 </header>
 
-<!-- Page Content -->
 <main class="page-content">
-    
     <!-- Hero Section -->
     <section class="hero">
         <h1>Product Inventory</h1>
@@ -77,5 +81,13 @@
 </footer>
 
 <script src="scripts.js"></script>
+
+<!-- Mobile Menu Script -->
+<script>
+document.getElementById("hamburger").onclick = function () {
+    document.getElementById("mobile-menu").classList.toggle("open");
+};
+</script>
+
 </body>
 </html>
