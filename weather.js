@@ -1,4 +1,4 @@
-const API_KEY = "YOUR_API_KEY_HERE"; // <- put your OpenWeatherMap API key here
+const API_KEY = "c22fecf2254ca915f8a753daf425d99f"; 
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("weather-form");
@@ -36,7 +36,7 @@ function handleWeatherRequest(event) {
     }
 
     // Build URL according to assignment + metric units
-    const url = `https://api.openweathermap.org/data/2.5/forecast?mode=json&q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?mode=json&q=${encodeURIComponent(city)}&units=metric&appid=${c22fecf2254ca915f8a753daf425d99f}`;
 
     showWeatherMessage("Loading forecast, please wait...", "success");
     outputDiv.innerHTML = "";
