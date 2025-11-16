@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Inventory (XML)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>Product Inventory</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Products (XML)</a></li>
-            <li><a href="weather.html">Weather Forecast (JSON)</a></li>
-        </ul>
-    </nav>
+
+<!-- Fixed Navbar -->
+<header class="navbar">
+    <div class="nav-inner">
+        <div class="nav-brand">
+            <span class="nav-logo">NCI Store</span>
+            <span class="nav-subtitle">XML Product Inventory</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Products</a></li>
+                <li><a href="weather.html">Weather Forecast</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <section>
-        <h2>All Products</h2>
-        <p>This page retrieves and displays product information stored in an XML file.</p>
+<!-- Page Content -->
+<main class="page-content">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Product Inventory</h1>
+        <p>
+            Explore items loaded from our <strong>products.xml</strong> file. You can browse all products
+            or quickly search using a unique product code.
+        </p>
+    </section>
 
-        <div id="products-container">
-            <!-- Table of products will be injected here by JavaScript -->
+    <!-- All Products -->
+    <section class="card">
+        <div class="card-header">
+            <h2>All Products</h2>
+            <p>The complete list of available products parsed from XML.</p>
+        </div>
+        <div class="card-body" id="products-container">
+            <!-- Product table injected here by scripts.js -->
         </div>
     </section>
 
-    <section>
-        <h2 class="section-title">Search Product by Code</h2>
-        <p>Enter a product code (format: ###-##, e.g. 101-01) to view its details.</p>
+    <!-- Product Search -->
+    <section class="card">
+        <div class="card-header">
+            <h2>Search Product by Code</h2>
+            <p>Use the format <strong>###-##</strong> (example: <code>101-01</code>).</p>
+        </div>
 
-        <form id="search-form">
-            <label for="product-code">Product Code:</label>
-            <input type="text" id="product-code" name="product-code" placeholder="e.g. 101-01">
-            <button type="submit">Search</button>
-        </form>
+        <div class="card-body">
+            <form id="search-form" class="form-inline">
+                <div class="form-group">
+                    <label for="product-code">Product Code</label>
+                    <input type="text" id="product-code" placeholder="e.g. 101-01">
+                </div>
+                <button type="submit">Search</button>
+            </form>
 
-        <div id="search-message" class="message" style="display:none;"></div>
-        <div id="search-result">
-            <!-- Selected product details will appear here -->
+            <div id="search-message" class="message" style="display:none;"></div>
+            <div id="search-result" class="search-result"></div>
         </div>
     </section>
 </main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <p>Made by me </p>
+</footer>
 
 <script src="scripts.js"></script>
 </body>
