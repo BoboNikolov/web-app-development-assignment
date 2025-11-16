@@ -116,15 +116,15 @@ body {
 }
 
 .logo-img {
-    width: 55px;
-    height: 55px;
+    width: 99px;
+    height: 99px;
     object-fit: contain;  /* scales nicely */
 }
 
 
 .logo-placeholder {
-    width: 55px;
-    height: 55px;
+    width: 99px;
+    height: 99px;
     background-color: transparent; /* transparent now */
     border: none; /* remove border */
     display: flex;
