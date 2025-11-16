@@ -1,81 +1,6 @@
-/* RESET + GLOBAL */
-/* FORM STYLING (shared by search + weather) */
-.form-inline {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: flex-end;
-    margin-bottom: 1rem;
-}
-
-.form-group {
-    flex: 1;
-    min-width: 220px;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 0.55rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 0.55rem 1.1rem;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-button:hover {
-    background-color: #005fa3;
-}
-
-/* MESSAGES */
-.message {
-    padding: 0.6rem 0.9rem;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-}
-
-.message.error {
-    background-color: #ffd5d5;
-    color: #900;
-}
-
-.message.success {
-    background-color: #d9ffe4;
-    color: #067a23;
-}
-
-/* WEATHER OUTPUT TABLE */
-.weather-output table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-.weather-output th,
-.weather-output td {
-    padding: 0.7rem;
-    border-bottom: 1px solid #eee;
-}
-
-.weather-output th {
-    background: #f3f3f3;
-    text-align: left;
-}
-
+/* ---------------------------------------------------
+   RESET & GLOBAL
+--------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -88,14 +13,18 @@ body {
     color: #222;
 }
 
-/* FIXED NAVBAR (BABY BLUE) */
+/* ---------------------------------------------------
+   NAVBAR (FIXED HEIGHT + RESPONSIVE)
+--------------------------------------------------- */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #9dd7ff; /* baby blue */
     color: #000;
-    padding: 0.6rem 0;
+    height: 70px;               /* 🔥 fixed navbar height */
+    display: flex;
+    align-items: center;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     z-index: 1000;
 }
@@ -104,37 +33,30 @@ body {
     max-width: 1100px;
     margin: auto;
     padding: 0 1.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* LOGO PLACEHOLDER */
+/* LOGO */
 .nav-logo-box {
     display: flex;
     align-items: center;
 }
 
-.logo-img {
-    width: 99px;
-    height: 99px;
-    object-fit: contain;  /* scales nicely */
-}
-
-
-.logo-placeholder {
-    width: 99px;
-    height: 99px;
-    background-color: transparent; /* transparent now */
-    border: none; /* remove border */
-    display: flex;
-    justify-content: center;
+.logo-link {
+    display: inline-flex;
     align-items: center;
-    font-weight: 700;
-    color: #0077cc; /* text stays */
-    font-size: 0.9rem;
+    height: 100%;
 }
 
+.logo-img {
+    height: 100%;      /* fill the navbar vertically */
+    max-height: 50px;  /* keep logo clean */
+    width: auto;
+    object-fit: contain;
+}
 
 /* NAV LINKS */
 .nav-links {
@@ -166,12 +88,12 @@ body {
     padding-left: 0.5rem;
 }
 
-/* Default nav display (desktop) */
+/* Default desktop menu */
 #mobile-menu {
     display: flex;
 }
 
-/* RESPONSIVE NAV (MOBILE) */
+/* Mobile menu */
 @media (max-width: 768px) {
     .nav-inner {
         align-items: center;
@@ -187,29 +109,28 @@ body {
         border-top: 1px solid #66b7ff;
     }
 
-    /* Hide menu by default on mobile */
     #mobile-menu {
         display: none;
         width: 100%;
     }
 
-    /* Show when "open" class is added */
     #mobile-menu.open {
         display: block;
     }
 
-    /* Show hamburger on mobile */
     .hamburger {
         display: block;
         color: #000;
     }
 }
 
-/* PAGE CONTENT SPACING BELOW NAV */
+/* ---------------------------------------------------
+   PAGE CONTENT
+--------------------------------------------------- */
 .page-content {
     max-width: 1100px;
     margin: auto;
-    padding: 6rem 1.5rem 2rem; /* top padding so content isn't under navbar */
+    padding: 7rem 1.5rem 2rem; /* top padding so content clears navbar */
 }
 
 /* HERO SECTION */
@@ -225,13 +146,21 @@ body {
     margin-bottom: 0.4rem;
 }
 
-/* CARD STYLING */
+/* ---------------------------------------------------
+   CARDS
+--------------------------------------------------- */
 .card {
     background: white;
     border-radius: 10px;
     border: 1px solid #e3e3e3;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .card-header {
@@ -243,7 +172,9 @@ body {
     padding: 1rem 1.5rem 1.5rem;
 }
 
-/* FORM STYLING */
+/* ---------------------------------------------------
+   FORMS
+--------------------------------------------------- */
 .form-inline {
     display: flex;
     flex-wrap: wrap;
@@ -283,7 +214,9 @@ button:hover {
     background-color: #005fa3;
 }
 
-/* MESSAGES */
+/* ---------------------------------------------------
+   MESSAGES
+--------------------------------------------------- */
 .message {
     padding: 0.6rem 0.9rem;
     border-radius: 5px;
@@ -300,7 +233,9 @@ button:hover {
     color: #067a23;
 }
 
-/* TABLE STYLE */
+/* ---------------------------------------------------
+   TABLES
+--------------------------------------------------- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -317,9 +252,11 @@ th {
     text-align: left;
 }
 
-/* FOOTER (BABY BLUE) */
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
 .site-footer {
-    background-color: #9dd7ff; /* baby blue */
+    background-color: #9dd7ff;
     padding: 1.3rem 0;
     text-align: center;
     font-size: 0.9rem;
