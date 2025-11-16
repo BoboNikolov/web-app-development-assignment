@@ -1,4 +1,4 @@
-const API_KEY = "c22fecf2254ca915f8a753daf425d99f"; 
+const API_KEY = "c22fecf2254ca915f8a753daf425d99f"; // your key
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("weather-form");
@@ -29,14 +29,15 @@ function handleWeatherRequest(event) {
         return;
     }
 
-    if (!API_KEY || API_KEY === "c22fecf2254ca915f8a753daf425d99f") {
+    // Optional: simple check in case you ever go back to placeholder
+    if (!API_KEY || API_KEY === "YOUR_API_KEY_HERE") {
         showWeatherMessage("Please set your OpenWeatherMap API key in weather.js.", "error");
         outputDiv.innerHTML = "";
         return;
     }
 
     // Build URL according to assignment + metric units
-    const url = `https://api.openweathermap.org/data/2.5/forecast?mode=json&q=${encodeURIComponent(city)}&units=metric&appid=${c22fecf2254ca915f8a753daf425d99f}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?mode=json&q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`;
 
     showWeatherMessage("Loading forecast, please wait...", "success");
     outputDiv.innerHTML = "";
@@ -68,7 +69,7 @@ function renderWeather(data) {
     const cityName = data.city.name;
     const country = data.city.country;
 
-    // Take first 5 entries (approx first day or so) for display
+    // Take first 5 entries for display
     const firstFive = data.list.slice(0, 5);
 
     let html = `
@@ -119,4 +120,3 @@ function showWeatherMessage(text, type) {
     messageDiv.className = `message ${type}`;
     messageDiv.style.display = "block";
 }
-
