@@ -47,13 +47,44 @@ body {
   justify-content: center;
 }
 
-/* ⭐ TEXT LOGO — clean, modern, no scaling issues */
+/* TEXT LOGO  */
 .text-logo {
   font-size: 28px;
   font-weight: 700;
   color: #004a7c;
   letter-spacing: 1px;
 }
+
+/* === Two-Tone Logo Style === */
+.text-logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+/* Navy part */
+.logo-main {
+    color: #00264d;  /* dark navy */
+}
+
+/* White part */
+.logo-accent {
+    color: #ffffff; /* white */
+    margin-left: 2px;
+}
+
+/* TM symbol */
+.logo-tm {
+    font-size: 12px;
+    margin-left: 4px;
+    color: #ffffff; /* white TM */
+    opacity: 0.85;
+    position: relative;
+    top: -6px; /* lifts it slightly */
+}
+
 
 /* === Nav links === */
 .nav-links {
