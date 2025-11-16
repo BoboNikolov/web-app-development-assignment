@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast (JSON)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Weather Forecast</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Products (XML)</a></li>
+            <li><a href="weather.html" class="active">Weather Forecast (JSON)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Check 5-Day Weather Forecast</h2>
+        <p>This page sends a GET request to the OpenWeatherMap web service and renders the JSON response.</p>
+
+        <form id="weather-form">
+            <label for="city">City Name:</label>
+            <input type="text" id="city" name="city" placeholder="e.g. Dublin">
+            <button type="submit">Get Forecast</button>
+        </form>
+
+        <div id="weather-message" class="message" style="display:none;"></div>
+
+        <section id="weather-output">
+            <!-- Weather results will be injected here -->
+        </section>
+    </section>
+</main>
+
+<script src="weather.js"></script>
+</body>
+</html>
 
