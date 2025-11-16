@@ -29,7 +29,7 @@ function handleWeatherRequest(event) {
         return;
     }
 
-    if (!API_KEY || API_KEY === "YOUR_API_KEY_HERE") {
+    if (!API_KEY || API_KEY === "c22fecf2254ca915f8a753daf425d99f") {
         showWeatherMessage("Please set your OpenWeatherMap API key in weather.js.", "error");
         outputDiv.innerHTML = "";
         return;
