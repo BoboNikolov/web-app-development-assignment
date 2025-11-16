@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Inventory (XML)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Product Inventory</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Products (XML)</a></li>
+            <li><a href="weather.html">Weather Forecast (JSON)</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>All Products</h2>
+        <p>This page retrieves and displays product information stored in an XML file.</p>
+
+        <div id="products-container">
+            <!-- Table of products will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Search Product by Code</h2>
+        <p>Enter a product code (format: ###-##, e.g. 101-01) to view its details.</p>
+
+        <form id="search-form">
+            <label for="product-code">Product Code:</label>
+            <input type="text" id="product-code" name="product-code" placeholder="e.g. 101-01">
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="search-message" class="message" style="display:none;"></div>
+        <div id="search-result">
+            <!-- Selected product details will appear here -->
+        </div>
+    </section>
+</main>
+
+<script src="scripts.js"></script>
+</body>
+</html>
 
