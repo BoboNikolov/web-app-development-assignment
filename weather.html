@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Weather Forecast (JSON)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- same CSS as index.html -->
+    <!-- Same CSS file as index.html -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,8 +38,9 @@
     <section class="hero">
         <h1>Weather Forecast</h1>
         <p>
-            This page sends a request to the <strong>OpenWeatherMap</strong> web service, retrieves
-            a JSON forecast, and displays the results for the city you enter.
+            This page sends a request to the <strong>OpenWeatherMap</strong> web service and retrieves
+            a <strong>JSON</strong> forecast for the city you enter. The response is parsed in JavaScript
+            and displayed below in a readable format.
         </p>
     </section>
 
@@ -47,7 +48,7 @@
     <section class="card">
         <div class="card-header">
             <h2>Check 5-Day Forecast</h2>
-            <p>Enter a city name and view the upcoming forecast from the JSON response.</p>
+            <p>Enter a city name and view the upcoming forecast using data from the JSON response.</p>
         </div>
 
         <div class="card-body">
@@ -68,6 +69,140 @@
             </div>
         </div>
     </section>
+
+    <!-- Extra info section to give the page more length + explanation -->
+    <section class="card extra-info">
+        <div class="card-header">
+            <h2>How This Page Works</h2>
+        </div>
+        <div class="card-body">
+            <p>
+                When you enter a city and click <strong>Get Forecast</strong>, the application builds a
+                URL for the OpenWeatherMap API using the city name and an API key. JavaScript then
+                uses the <code>fetch()</code> function to send an HTTP GET request.
+            </p>
+            <p>
+                The response is returned as JSON. This JSON is parsed and key fields such as
+                date/time, temperature, “feels like” value, humidity and a text description of
+                the weather are displayed in a table. Basic form validation and error handling
+                are also implemented so that invalid inputs and failed requests are clearly
+                communicated to the user.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <p>Made by me 😎</p>
+</footer>
+
+<!-- Weather logic -->
+<script src="weather.js"></script>
+
+<!-- Mobile Menu Script (same as index.html) -->
+<script>
+document.getElementById("hamburger").onclick = function () {
+    document.getElementById("mobile-menu").classList.toggle("open");
+};
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast (JSON)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Same CSS file as index.html -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Fixed Navbar -->
+<header class="navbar">
+    <div class="nav-inner">
+
+        <!-- LOGO PLACEHOLDER -->
+        <div class="nav-logo-box">
+            <div class="logo-placeholder">LOGO</div>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <nav id="mobile-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Products</a></li>
+                <li><a href="weather.html" class="active">Weather Forecast</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="page-content">
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Weather Forecast</h1>
+        <p>
+            This page sends a request to the <strong>OpenWeatherMap</strong> web service and retrieves
+            a <strong>JSON</strong> forecast for the city you enter. The response is parsed in JavaScript
+            and displayed below in a readable format.
+        </p>
+    </section>
+
+    <!-- Weather Card -->
+    <section class="card">
+        <div class="card-header">
+            <h2>Check 5-Day Forecast</h2>
+            <p>Enter a city name and view the upcoming forecast using data from the JSON response.</p>
+        </div>
+
+        <div class="card-body">
+            <!-- Weather Form -->
+            <form id="weather-form" class="form-inline">
+                <div class="form-group">
+                    <label for="city">City Name</label>
+                    <input type="text" id="city" name="city" placeholder="e.g. Dublin">
+                </div>
+                <button type="submit">Get Forecast</button>
+            </form>
+
+            <div id="weather-message" class="message" style="display:none;"></div>
+
+            <!-- Output Area -->
+            <div id="weather-output" class="weather-output">
+                <!-- Weather table will be injected here by weather.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra info section to give the page more length + explanation -->
+    <section class="card extra-info">
+        <div class="card-header">
+            <h2>How This Page Works</h2>
+        </div>
+        <div class="card-body">
+            <p>
+                When you enter a city and click <strong>Get Forecast</strong>, the application builds a
+                URL for the OpenWeatherMap API using the city name and an API key. JavaScript then
+                uses the <code>fetch()</code> function to send an HTTP GET request.
+            </p>
+            <p>
+                The response is returned as JSON. This JSON is parsed and key fields such as
+                date/time, temperature, “feels like” value, humidity and a text description of
+                the weather are displayed in a table. Basic form validation and error handling
+                are also implemented so that invalid inputs and failed requests are clearly
+                communicated to the user.
+            </p>
+        </div>
+    </section>
+
 </main>
 
 <!-- Footer -->
@@ -75,7 +210,7 @@
     <p>Made by Bobo Nikolov</p>
 </footer>
 
-<!-- Your existing JS -->
+<!-- Weather logic -->
 <script src="weather.js"></script>
 
 <!-- Mobile Menu Script (same as index.html) -->
