@@ -14,7 +14,7 @@ body {
 }
 
 /* ---------------------------------------------------
-   NAVBAR (FIXED HEIGHT + RESPONSIVE)
+   NAVBAR (BABY BLUE, AUTO HEIGHT, LOGO CONTROLLED)
 --------------------------------------------------- */
 .navbar {
     position: fixed;
@@ -22,7 +22,7 @@ body {
     width: 100%;
     background-color: #9dd7ff; /* baby blue */
     color: #000;
-    height: 70px;               /* 🔥 fixed navbar height */
+    padding: 0.5rem 0;        /* controls bar height */
     display: flex;
     align-items: center;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -39,7 +39,7 @@ body {
     align-items: center;
 }
 
-/* LOGO */
+/* LOGO AREA */
 .nav-logo-box {
     display: flex;
     align-items: center;
@@ -48,12 +48,13 @@ body {
 .logo-link {
     display: inline-flex;
     align-items: center;
-    height: 100%;
+    justify-content: center;
 }
 
+/* 🔥 LOGO SIZE IS LOCKED HERE */
+/* Even if the file is 500x500, it will show at ~60px tall */
 .logo-img {
-    height: 100%;      /* fill the navbar vertically */
-    max-height: 50px;  /* keep logo clean */
+    height: 60px;      /* change this if you want bigger/smaller */
     width: auto;
     object-fit: contain;
 }
@@ -93,7 +94,9 @@ body {
     display: flex;
 }
 
-/* Mobile menu */
+/* ---------------------------------------------------
+   RESPONSIVE NAV (MOBILE)
+--------------------------------------------------- */
 @media (max-width: 768px) {
     .nav-inner {
         align-items: center;
@@ -125,7 +128,7 @@ body {
 }
 
 /* ---------------------------------------------------
-   PAGE CONTENT
+   PAGE CONTENT LAYOUT
 --------------------------------------------------- */
 .page-content {
     max-width: 1100px;
@@ -147,7 +150,7 @@ body {
 }
 
 /* ---------------------------------------------------
-   CARDS
+   CARDS (USED ON BOTH PAGES)
 --------------------------------------------------- */
 .card {
     background: white;
@@ -172,23 +175,30 @@ body {
     padding: 1rem 1.5rem 1.5rem;
 }
 
+/* Extra info / bottom section */
+.extra-info {
+    margin-top: 1rem;
+}
+
 /* ---------------------------------------------------
-   FORMS
+   FORMS (SEARCH + WEATHER)
 --------------------------------------------------- */
 .form-inline {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
 }
 
 .form-group {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 label {
-    margin-bottom: 0.3rem;
     display: block;
+    margin-bottom: 0.3rem;
     font-weight: bold;
 }
 
@@ -200,7 +210,7 @@ input[type="text"] {
 }
 
 button {
-    padding: 0.55rem 1rem;
+    padding: 0.55rem 1.1rem;
     background-color: #0077cc;
     color: white;
     border: none;
@@ -220,7 +230,7 @@ button:hover {
 .message {
     padding: 0.6rem 0.9rem;
     border-radius: 5px;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .message.error {
@@ -234,7 +244,7 @@ button:hover {
 }
 
 /* ---------------------------------------------------
-   TABLES
+   TABLES (PRODUCTS + WEATHER)
 --------------------------------------------------- */
 table {
     width: 100%;
@@ -252,11 +262,29 @@ th {
     text-align: left;
 }
 
+/* Weather output table wrapper */
+.weather-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.weather-output th,
+.weather-output td {
+    padding: 0.7rem;
+    border-bottom: 1px solid #eee;
+}
+
+.weather-output th {
+    background: #f3f3f3;
+    text-align: left;
+}
+
 /* ---------------------------------------------------
    FOOTER
 --------------------------------------------------- */
 .site-footer {
-    background-color: #9dd7ff;
+    background-color: #9dd7ff; /* baby blue */
     padding: 1.3rem 0;
     text-align: center;
     font-size: 0.9rem;
