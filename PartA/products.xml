@@ -1,1 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <category>Laptop</category>
+        <code>101-01</code>
+        <name>NovaBook 14</name>
+        <description>Lightweight 14-inch laptop for students.</description>
+        <quantity>15</quantity>
+        <unitPrice>749.99</unitPrice>
+    </product>
+
+    <product>
+        <category>Laptop</category>
+        <code>101-02</code>
+        <name>NovaBook 16 Pro</name>
+        <description>Powerful 16-inch laptop for developers.</description>
+        <quantity>8</quantity>
+        <unitPrice>1299.00</unitPrice>
+    </product>
+
+    <product>
+        <category>Smartphone</category>
+        <code>202-01</code>
+        <name>SkyPhone S</name>
+        <description>5G smartphone with dual cameras.</description>
+        <quantity>30</quantity>
+        <unitPrice>499.95</unitPrice>
+    </product>
+
+    <product>
+        <category>Smartphone</category>
+        <code>202-02</code>
+        <name>SkyPhone XL</name>
+        <description>Large 6.7-inch display, long battery life.</description>
+        <quantity>18</quantity>
+        <unitPrice>649.00</unitPrice>
+    </product>
+
+    <product>
+        <category>Headphones</category>
+        <code>303-01</code>
+        <name>BeatWave Wireless</name>
+        <description>Over-ear Bluetooth headphones with noise cancelling.</description>
+        <quantity>25</quantity>
+        <unitPrice>179.99</unitPrice>
+    </product>
+
+    <product>
+        <category>Headphones</category>
+        <code>303-02</code>
+        <name>BeatWave Lite</name>
+        <description>On-ear wired headphones, lightweight design.</description>
+        <quantity>40</quantity>
+        <unitPrice>39.99</unitPrice>
+    </product>
+
+    <product>
+        <category>Monitor</category>
+        <code>404-01</code>
+        <name>CrystalView 24</name>
+        <description>24-inch Full HD IPS monitor.</description>
+        <quantity>12</quantity>
+        <unitPrice>159.50</unitPrice>
+    </product>
+
+    <product>
+        <category>Monitor</category>
+        <code>404-02</code>
+        <name>CrystalView 27 Ultra</name>
+        <description>27-inch QHD monitor with adjustable stand.</description>
+        <quantity>10</quantity>
+        <unitPrice>259.99</unitPrice>
+    </product>
+
+    <product>
+        <category>Keyboard</category>
+        <code>505-01</code>
+        <name>KeyMaster Mechanical</name>
+        <description>Mechanical keyboard with RGB backlight.</description>
+        <quantity>35</quantity>
+        <unitPrice>89.00</unitPrice>
+    </product>
+
+    <product>
+        <category>Mouse</category>
+        <code>606-01</code>
+        <name>SwiftMouse Pro</name>
+        <description>Wireless ergonomic mouse.</description>
+        <quantity>50</quantity>
+        <unitPrice>49.99</unitPrice>
+    </product>
+</products>
 
