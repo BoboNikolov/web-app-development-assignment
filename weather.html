@@ -3,39 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Forecast (JSON)</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- same CSS as index.html -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Weather Forecast</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Products (XML)</a></li>
-            <li><a href="weather.html" class="active">Weather Forecast (JSON)</a></li>
-        </ul>
-    </nav>
+
+<!-- Fixed Navbar -->
+<header class="navbar">
+    <div class="nav-inner">
+
+        <!-- LOGO PLACEHOLDER -->
+        <div class="nav-logo-box">
+            <div class="logo-placeholder">LOGO</div>
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+        <nav id="mobile-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Products</a></li>
+                <li><a href="weather.html" class="active">Weather Forecast</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main>
-    <section>
-        <h2>Check 5-Day Weather Forecast</h2>
-        <p>This page sends a GET request to the OpenWeatherMap web service and renders the JSON response.</p>
+<main class="page-content">
 
-        <form id="weather-form">
-            <label for="city">City Name:</label>
-            <input type="text" id="city" name="city" placeholder="e.g. Dublin">
-            <button type="submit">Get Forecast</button>
-        </form>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Weather Forecast</h1>
+        <p>
+            This page sends a request to the <strong>OpenWeatherMap</strong> web service, retrieves
+            a JSON forecast, and displays the results for the city you enter.
+        </p>
+    </section>
 
-        <div id="weather-message" class="message" style="display:none;"></div>
+    <!-- Weather Card -->
+    <section class="card">
+        <div class="card-header">
+            <h2>Check 5-Day Forecast</h2>
+            <p>Enter a city name and view the upcoming forecast from the JSON response.</p>
+        </div>
 
-        <section id="weather-output">
-            <!-- Weather results will be injected here -->
-        </section>
+        <div class="card-body">
+            <!-- Weather Form -->
+            <form id="weather-form" class="form-inline">
+                <div class="form-group">
+                    <label for="city">City Name</label>
+                    <input type="text" id="city" name="city" placeholder="e.g. Dublin">
+                </div>
+                <button type="submit">Get Forecast</button>
+            </form>
+
+            <div id="weather-message" class="message" style="display:none;"></div>
+
+            <!-- Output Area -->
+            <div id="weather-output" class="weather-output">
+                <!-- Weather table will be injected here by weather.js -->
+            </div>
+        </div>
     </section>
 </main>
 
+<!-- Footer -->
+<footer class="site-footer">
+    <p>Made by Bobo Nikolov</p>
+</footer>
+
+<!-- Your existing JS -->
 <script src="weather.js"></script>
+
+<!-- Mobile Menu Script (same as index.html) -->
+<script>
+document.getElementById("hamburger").onclick = function () {
+    document.getElementById("mobile-menu").classList.toggle("open");
+};
+</script>
+
 </body>
 </html>
-
