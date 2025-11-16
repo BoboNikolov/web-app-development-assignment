@@ -11,14 +11,14 @@ body {
   color: #222;
 }
 
-/* === NAVBAR (like your old top-bar, but for this site) === */
+/* === NAVBAR === */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #9dd7ff; /* baby blue */
   color: #000;
-  padding: 12px 0;           /* controls bar height */
+  padding: 12px 0;
   display: flex;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
@@ -35,7 +35,7 @@ body {
   align-items: center;
 }
 
-/* === Logo === */
+/* === Logo (Text version) === */
 .nav-logo-box {
   display: flex;
   align-items: center;
@@ -47,12 +47,12 @@ body {
   justify-content: center;
 }
 
-/* 🔥 This is the important bit – same logic as your old code */
-.logo-img {
-  height: 55px;       /* logo visual size */
-  max-height: 60px;   /* safety cap */
-  width: auto;
-  object-fit: contain;
+/* ⭐ TEXT LOGO — clean, modern, no scaling issues */
+.text-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #004a7c;
+  letter-spacing: 1px;
 }
 
 /* === Nav links === */
@@ -126,7 +126,7 @@ body {
 .page-content {
   max-width: 1100px;
   margin: auto;
-  padding: 7rem 1.5rem 2rem; /* top padding so content clears navbar */
+  padding: 7rem 1.5rem 2rem;
 }
 
 /* === Hero section === */
@@ -170,7 +170,7 @@ body {
   margin-top: 1rem;
 }
 
-/* === Forms (search + weather) === */
+/* === Forms === */
 .form-inline {
   display: flex;
   flex-wrap: wrap;
@@ -229,7 +229,7 @@ button:hover {
   color: #067a23;
 }
 
-/* === Tables (products + weather) === */
+/* === Tables === */
 table {
   width: 100%;
   border-collapse: collapse;
